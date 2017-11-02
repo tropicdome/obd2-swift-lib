@@ -1,7 +1,7 @@
 # OBD2 Swift
 
 [![GitHub Release](https://img.shields.io/badge/release-none-red.svg)](https://github.com/lemberg/obd2-swift-lib)
-[![Swift Version](https://img.shields.io/badge/Swift-3.1%2B-orange.svg?style=flat)](http://cocoapods.org/pods/PermissionsService) 
+[![Swift Version](https://img.shields.io/badge/Swift-4.0%2B-orange.svg?style=flat)](https://github.com/lemberg/obd2-swift-lib) 
 [![GitHub Platforms](https://img.shields.io/badge/platform-ios%20%7C%20macos%20-brightgreen.svg)](https://github.com/lemberg/obd2-swift-lib)
 [![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://github.com/lemberg/obd2-swift-lib/blob/dev/LICENSE) 
 [![By](https://img.shields.io/badge/By-Lemberg%20Solutions%20Limited-blue.svg?style=flat)](http://cocoapods.org/pods/PermissionsService)
@@ -16,6 +16,8 @@ On-board diagnostics swift library.
    * [Getting metrics](https://github.com/lemberg/obd2-swift-lib#and-what-about-getting-metrics)
    * [Observing](https://github.com/lemberg/obd2-swift-lib#ok-but-what-about-monitoring)
 * [Installation](https://github.com/lemberg/obd2-swift-lib#installation)
+   * [As Embedded Framework](https://github.com/lemberg/obd2-swift-lib#manually-as-embedded-framework)
+   * [CocoaPods](https://github.com/lemberg/obd2-swift-lib#cocoapods)
 * [Author](https://github.com/lemberg/obd2-swift-lib#author)
 * [License](https://github.com/lemberg/obd2-swift-lib#license)
 
@@ -155,6 +157,7 @@ Tell him to observe with specific PID number and enjoy responses. :]
 Yep! Single request method can take `Bool` parameter `notifyObservers` wich is `true` by default. Using it you can manage which requests will return response not only in completion block but in observer block too. 
 
 ## Installation
+
 ### Manually as Embedded Framework
 
 * Go to your project root git folder and clone OBD2 Swift as a git [submodule](https://git-scm.com/docs/git-submodule) by running the following command from the terminal.
@@ -170,6 +173,18 @@ $ git submodule add https://github.com/lemberg/obd2-swift-lib.git
 * Select OBD2 Swift.framework from dialogue and that's all!  :tada:
 
 > Don't forget to do `import OBD2Swift` in classes where you want to use this framework
+
+### CocoaPods
+
+To install it, simply add this line to your Podfile:
+
+```swift
+  pod "OBD2-Swift"
+```
+
+> If you'll need, there is still a version written on **Swift 3** named `swift3`. 
+
+Now you need to run `pod update` command from you project folder and that's it!
 
 ## Author
 
